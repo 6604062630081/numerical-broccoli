@@ -16,7 +16,7 @@ import {
   LinearRegression 
 } from './Components/componentRender';
 
-function App () {
+const App = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate(); // Initialize useNavigate
 
@@ -51,12 +51,5 @@ function App () {
     </div>
   );
 };
-
-// // Wrap App in Router to provide routing context
-// const AppWrapper = () => (
-//   <Router>
-//     <App />
-//   </Router>
-// );
 
 export default App;
