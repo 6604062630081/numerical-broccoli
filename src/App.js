@@ -16,7 +16,7 @@ import {
   LinearRegression 
 } from './Components/componentRender';
 
-const App = () => {
+function App () {
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate(); // Initialize useNavigate
 
