@@ -2,46 +2,39 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './buttons.css';
 
-const Buttons = ({ selectedOption, showHomeButton }) => {
+const buttonMapping = {
+  Root: [
+    { label: 'Bisection', path: '/bisection' },
+    { label: 'False Position', path: '/false-position' },
+    { label: 'One Point', path: '/one-point' },
+    { label: 'Newton-Raphson', path: '/newton-raphson' },
+    { label: 'Secant Method', path: '/secant-method' },
+  ],
+  Linear: [
+    { label: "Cramer's Rule", path: '/cramers-rule' },
+    { label: 'Gauss-Elimination', path: '/gaussian-elimination' },
+    { label: 'Jacobi Method', path: '/jacobi-method' },
+    { label: 'Gauss-Seidel', path: '/gauss-seidel' },
+  ],
+  Interpolation: [
+    { label: 'Lagrange', path: '/lagrange' },
+    { label: 'Spline', path: '/spline' },
+    { label: 'Regression', path: '/regression' },
+  ],
+};
+
+const Buttons = ({ selectedOption }) => {
   const navigate = useNavigate();
 
   return (
     <div className="buttons-container">
-      {selectedOption === 'Root' && (
-        <>
-          <button className="b1" onClick={() => navigate('/bisection')}>Bisection</button>
-          <button className="b2" onClick={() => navigate('/false-position')}>False Position</button>
-          <button className="b3" onClick={() => navigate('/one-point')}>One Point</button>
-          <button className="b4" onClick={() => navigate('/newton-raphson')}>Newton-Raphson</button>
-          <button className="b5" onClick={() => navigate('/secant-method')}>Secant Method</button>
-        </>
-      )}
-
-      {selectedOption === 'Linear' && (
-        <>
-          <button className="b6" onClick={() => navigate('/cramers-rule')}>Cramer's Rule</button>
-          <button className="b7" onClick={() => navigate('/gaussian-elimination')}>Gauss-Elimination</button>
-          <button className="b8" onClick={() => navigate('/jacobi-method')}>Jacobi Method</button>
-          <button className="b9" onClick={() => navigate('/gauss-seidel')}>Gauss-Seidel</button>
-        </>
-      )}
-
-      {selectedOption === 'Interpolation' && (
-        <>
-          <button className="b10" onClick={() => navigate('/lagrange')}>Lagrange</button>
-          <button className="b11" onClick={() => navigate('/spline')}>Spline</button>
-          <button className="b12" onClick={() => navigate('/regression')}>Regression</button>
-        </>
-      )}
-
-      {showHomeButton && (
-        <button className="home-button" onClick={() => navigate('/')}>
-          Home
+      {selectedOption && buttonMapping[selectedOption]?.map((button, index) => (
+        <button key={index} className={`b${index + 1}`} onClick={() => navigate(button.path)}>
+          {button.label}
         </button>
-      )}
+      ))}
     </div>
   );
 };
 
 export default Buttons;
-
