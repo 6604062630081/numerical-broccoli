@@ -7,7 +7,7 @@ const SelectDropdown = ({ onSelect }) => {
   const handleChange = (e) => {
     const value = e.target.value;
     setSelects(value);
-    onSelect(value); // Call the onSelect function passed as a prop
+    onSelect(value); 
   };
 
   return (
