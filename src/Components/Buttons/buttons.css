@@ -1,0 +1,35 @@
+button {
+  background-color: black; /* Set background color to black */
+  color: white;            /* Set font color to white */
+  width: 8rem;           /* Set a uniform width for all buttons */
+  height: 50px;           /* Set a uniform height for all buttons */
+  margin: 5px;            /* Set a margin to create a gap of 10px between buttons */
+  border: none;           /* Remove default border */
+  border-radius: 5px;     /* Optional: Add some rounded corners */
+  text-align: center;     /* Center the text inside the button */
+  cursor: pointer;        /* Change cursor to pointer on hover */
+  transition: all 400ms ease;
+}
+
+/* Optional: Center the buttons container */
+.buttons-container {
+  display: flex;          /* Use flexbox for alignment */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;    /* Center the buttons vertically */
+  flex-wrap: nowrap;        /* Allow wrapping to the next line if needed */
+  gap: 10px;              /* Space between buttons */
+}
+
+.b1:hover , .b2:hover,
+.b3:hover , .b4:hover,
+.b5:hover , .b6:hover,
+.b7:hover , .b8:hover,
+.b9:hover , .b10:hover,
+.b11:hover , .b12:hover {
+  background-color: white;
+  border: black 0.11rem solid;
+  color: rgb(53, 53, 53);
+  transition: all 500ms ease;
+} 
+
+

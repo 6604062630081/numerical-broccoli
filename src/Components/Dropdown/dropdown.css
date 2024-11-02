@@ -1,0 +1,35 @@
+/* Styles for the dropdown */
+select {
+  padding: 10px;
+  font-size: 22px;
+  border: black 0.11rem solid;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #ffffff; /* Updated background color */
+  color: #000000; /* Updated font color */
+  transition: border-color 0.3s; /* Smooth border color change */
+}
+
+/* Change border color on focus */
+select:focus {
+  border-color: #000000; /* Darker blue on focus */
+  color: #000000;
+  outline: none; /* Remove default outline */
+  transition: 0.15s;
+}
+
+select:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: all 500ms ease;
+}
+
+/* Option styles */
+option {
+  padding: 10px; /* Padding for options */
+}
+
+/* Placeholder styling */
+option:disabled {
+  display: none; /* Hide placeholder */
+}
+
