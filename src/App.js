@@ -52,11 +52,11 @@ function App () {
   );
 };
 
-// // Wrap App in Router to provide routing context
-// const AppWrapper = () => (
-//   <Router>
-//     <App />
-//   </Router>
-// );
+// Wrap App in Router to provide routing context
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
 
 export default App;
