@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/numerical-broccoli/static/css/main.1dc6be54.css",
-    "main.js": "/numerical-broccoli/static/js/main.88ea8bb6.js",
+    "main.js": "/numerical-broccoli/static/js/main.8ee6a271.js",
     "static/js/453.2ba8d5ab.chunk.js": "/numerical-broccoli/static/js/453.2ba8d5ab.chunk.js",
     "index.html": "/numerical-broccoli/index.html",
     "main.1dc6be54.css.map": "/numerical-broccoli/static/css/main.1dc6be54.css.map",
-    "main.88ea8bb6.js.map": "/numerical-broccoli/static/js/main.88ea8bb6.js.map",
+    "main.8ee6a271.js.map": "/numerical-broccoli/static/js/main.8ee6a271.js.map",
     "453.2ba8d5ab.chunk.js.map": "/numerical-broccoli/static/js/453.2ba8d5ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1dc6be54.css",
-    "static/js/main.88ea8bb6.js"
+    "static/js/main.8ee6a271.js"
   ]
 }
