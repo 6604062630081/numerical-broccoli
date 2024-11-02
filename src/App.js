@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import SelectDropdown from './Components/Dropdown/dropdown';
@@ -15,13 +16,13 @@ import {
   LinearRegression 
 } from './Components/componentRender';
 
-const  App = () => {
+const App = () => {
   const [selectedOption, setSelectedOption] = useState('');
-  const navigate = useNavigate(); 
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSelectChange = (value) => {
     setSelectedOption(value);
-    navigate('/');
+    navigate(value); // Navigate to the selected route
   };
 
   return (
@@ -49,6 +50,13 @@ const  App = () => {
       </Routes>
     </div>
   );
-}
+};
 
-export default App;
+// Wrap App in Router to provide routing context
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;
